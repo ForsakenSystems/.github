@@ -1,6 +1,6 @@
 # Forsaken Systems
 
-
+![GitHub Logo](images/logo.png)
 
 ## About
 It is all about to note down some stuff, which got lost all the time. So nothing special, here.
