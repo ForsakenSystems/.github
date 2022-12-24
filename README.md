@@ -3,6 +3,8 @@
 # About
 It is all about to note down some stuff, which got lost all the time. So nothing special, here.
 
+And of course looks best with dark theme ;)
+
 # [CTF](http://localos.io)
 Follow [Team localos](http://localos.io), mainly interessted in building CTFs for fun.
 
