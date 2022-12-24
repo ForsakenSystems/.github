@@ -11,7 +11,7 @@ Everything which gots forgotten from time to time.
 
 ### More or Less Default Stuff
 - [Database related](content/lost-and-found/defa/db.md)
-- [Virtualisation related](contentlost-and-found/defa/virt.md)
+- [Virtualisation related](content/lost-and-found/defa/virt.md)
 
 ### More or Less Exploitation Stuff
 - [Skeletons](content/lost-and-found/expl/skel.html)
