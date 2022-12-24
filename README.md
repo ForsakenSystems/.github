@@ -1,4 +1,8 @@
-![Logo](images/logo.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/ForsakenSystems/.github/blob/main/images/logo_light.png?raw=true">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/ForsakenSystems/.github/blob/main/images/logo_dark.png?raw=true">
+  <img alt="localos logo" src="https://github.com/ForsakenSystems/.github/blob/main/images/logo_dark.png?raw=true">
+</picture>
 
 # About
 It is all about to note down some stuff, which got lost all the time. So nothing special, here.
