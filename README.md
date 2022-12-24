@@ -20,6 +20,6 @@ Everything which gots forgotten from time to time.
 Everyting which is needed from time to time, or just it is nice to know.
 
 - [Reverse Engineering](content/links/re.md)
-- [Online Compiler and Disassembler](content/links/dis.md)
+- [Online Compiler and Disassembler](content/links/disa.md)
 - [Programming](content/links/prog.md)
 - [Shellcode](content/links/sc.md)
