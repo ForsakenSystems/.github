@@ -14,7 +14,7 @@ Everything which gots forgotten from time to time.
 - [Virtualisation related](content/lost-and-found/defa/virt.md)
 
 ### More or Less Exploitation Stuff
-- [Skeletons](content/lost-and-found/expl/skel.html)
+- [Skeletons](content/lost-and-found/expl/skel.md)
 
 # Link Sedimentation Tank
 Everyting which is needed from time to time, or just it is nice to know.
