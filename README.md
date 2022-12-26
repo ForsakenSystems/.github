@@ -9,6 +9,12 @@ It is all about to note down some stuff, which got lost all the time. So nothing
 
 And of course looks best with dark theme ;)
 
+# Just Stuff
+Some wannebe write-ups or maybe other content which nobody is interested in ^^
+
+- [Wannebes](content/stuff/wannebe.md)
+- [More or less research](content/stuff/research.md)
+
 # [CTF](http://localos.io)
 Follow [Team localos](http://localos.io), mainly interessted in building CTFs for fun.
 
