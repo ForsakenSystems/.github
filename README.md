@@ -12,7 +12,7 @@ And of course looks best with dark theme ;)
 # Just Stuff
 Some wannebe write-ups or maybe other content which nobody is interested in ^^
 
-- [Wannebes](content/stuff/wannebe.md)
+- [Wannebes](content/stuff/wannebes.md)
 - [More or less research](content/stuff/research.md)
 
 # [CTF](http://localos.io)
