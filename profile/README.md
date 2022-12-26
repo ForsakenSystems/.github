@@ -23,7 +23,7 @@ Everything which gots forgotten from time to time.
 - [Skeletons](content/lost-and-found/expl/skel.md)
 
 # Link Sedimentation Tank
-Everyting which is needed from time to time, or just it is nice to know.
+Everyting which is needed from time to time, or just cause it is nice to know.
 
 - [Reverse Engineering](content/links/re.md)
 - [Online Compiler and Disassembler](content/links/disa.md)
