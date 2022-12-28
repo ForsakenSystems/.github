@@ -24,6 +24,7 @@ Everything which gots forgotten from time to time.
 ### More or Less Default Stuff
 - [Database related](content/lost-and-found/defa/db.md)
 - [Virtualisation related](content/lost-and-found/defa/virt.md)
+- [Web related](content/lost-and-found/defa/web.md)
 
 ### More or Less Exploitation Stuff
 - [Skeletons](content/lost-and-found/expl/skel.md)
@@ -35,3 +36,4 @@ Everyting which is needed from time to time, or just cause it is nice to know.
 - [Online Compiler and Disassembler](content/links/disa.md)
 - [Programming](content/links/prog.md)
 - [Shellcode](content/links/sc.md)
+- [Exploit Development](content/links/expldev.md)
