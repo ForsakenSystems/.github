@@ -11,7 +11,7 @@
 - [Note](#note)
 - [Just Stuff](#just-stuff)
 - [CTF](#ctf)
-- [Lost+Found](#lost-found)
+- [Lost and Found](#lost-and-found)
     + [More or Less Default Stuff](#more-or-less-default-stuff)
     + [More or Less Exploitation Stuff](#more-or-less-exploitation-stuff)
 - [Link Sedimentation Tank](#link-sedimentation-tank)
@@ -44,7 +44,7 @@ Some wannebe write-ups or maybe other content which nobody is interested in ^^
 # CTF
 Follow [Team localos](http://localos.io), mainly interessted in building CTFs for fun.
 
-# Lost+Found
+# Lost and Found
 Everything which gots forgotten from time to time.
 
 ### More or Less Default Stuff
