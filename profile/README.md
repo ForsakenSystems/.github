@@ -63,3 +63,4 @@ Everyting which is needed from time to time, or just cause it is nice to know.
 - [Programming](content/links/prog.md)
 - [Shellcode](content/links/sc.md)
 - [Exploit Development](content/links/expldev.md)
+- [Misc](content/links/misc.md)
