@@ -10,7 +10,7 @@
 - [About](#about)
 - [Note](#note)
 - [Just Stuff](#just-stuff)
-- [Capture the Flag](#ctf)
+- [Capture the Flag](#capture-the-flag)
 - [Lost and Found](#lost-and-found)
     + [More or Less Default Stuff](#more-or-less-default-stuff)
     + [More or Less Exploitation Stuff](#more-or-less-exploitation-stuff)
