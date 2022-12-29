@@ -24,7 +24,7 @@ display_errors = On
 Stuff related to `python` in terms of web.
 
 ### Prevent Request Encoding
-- Prevent python requests from url encoding when doing `POST` might not be ideal (is some kind of standard), but might be needed.
+- Prevent python requests from url encoding when doing `POST` might not be ideal (is some kind of standard?), but might be needed.
 - For this just convert the data to string.
 
 ```python

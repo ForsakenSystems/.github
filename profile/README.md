@@ -4,10 +4,36 @@
   <img alt="localos logo" src="https://github.com/ForsakenSystems/.github/blob/main/images/logo_dark.png?raw=true">
 </picture>
 
+---
+
+### Table of Contents
+- [About](#about)
+- [Note](#note)
+- [Just Stuff](#just-stuff)
+- [[CTF](http://localos.io)](#-ctf--http---localosio-)
+- [Lost+Found](#lost-found)
+    + [More or Less Default Stuff](#more-or-less-default-stuff)
+    + [More or Less Exploitation Stuff](#more-or-less-exploitation-stuff)
+- [Link Sedimentation Tank](#link-sedimentation-tank)
+
+---
+
+
 # About
 It is all about to note down some stuff, which got lost all the time. So nothing special, here.
 
 And of course looks best with dark theme ;)
+
+# Note
+Note, all that can be found here is based on or powered by sheer ignorance and honest sloth.
+
+That said, some of the stuff might be ...
+
+- ... not correct
+- ... not working as expected (for you ^^)
+- ... definitely not reasonable in a productive environment
+- ... for research purpose only
+- ... a cheatsheet for lazy people who wants, that things just work, no matter how
 
 # Just Stuff
 Some wannebe write-ups or maybe other content which nobody is interested in ^^
