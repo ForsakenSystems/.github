@@ -10,7 +10,7 @@
 - [About](#about)
 - [Note](#note)
 - [Just Stuff](#just-stuff)
-- [[CTF](http://localos.io)](#-ctf--http---localosio-)
+- [CTF](#ctf)
 - [Lost+Found](#lost-found)
     + [More or Less Default Stuff](#more-or-less-default-stuff)
     + [More or Less Exploitation Stuff](#more-or-less-exploitation-stuff)
@@ -41,7 +41,7 @@ Some wannebe write-ups or maybe other content which nobody is interested in ^^
 - [Wannebes](content/stuff/wannebes.md)
 - [More or less research](content/stuff/research.md)
 
-# [CTF](http://localos.io)
+# CTF
 Follow [Team localos](http://localos.io), mainly interessted in building CTFs for fun.
 
 # Lost+Found
