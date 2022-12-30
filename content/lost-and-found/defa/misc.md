@@ -3,11 +3,11 @@
 ---
 
 ### Table of Contents
-- [Python Flask TypeError send_file](#python-flask-typeerror-send)
+- [Python Flask TypeError send_file](#python-flask-typeerror-send-file)
 
 ---
 
-## [Python Flask TypeError send_file]
+## Python Flask TypeError send_file
 - If a script is build for an older version of `python flask` follwoing error might occur:
 
 ```bash
