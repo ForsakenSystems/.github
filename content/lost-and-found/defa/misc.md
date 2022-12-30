@@ -8,7 +8,7 @@
 ---
 
 ## Python Flask TypeError send_file
-- If a script is build for an older version of `python flask` follwoing error might occur:
+- If a script is build for an older version of `python flask` following error might occur:
 
 ```bash
 TypeError: send_file() got an unexpected keyword argument 'attachment_filename'
