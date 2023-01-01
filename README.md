@@ -51,6 +51,7 @@ Everything which gots forgotten from time to time.
 - [Database related](content/lost-and-found/defa/db.md)
 - [Virtualisation related](content/lost-and-found/defa/virt.md)
 - [Web related](content/lost-and-found/defa/web.md)
+- [Programing related](content/lost-and-found/defa/prog.md)
 - [Misc](content/lost-and-found/defa/misc.md)
 
 ### More or Less Exploitation Stuff
