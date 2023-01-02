@@ -5,6 +5,7 @@
 ### Table of Contents
 - [Python Flask TypeError send_file](#python-flask-typeerror-send-file)
 - [Perlbrew](#perlbrew)
+- [Python Virtual Environment](#python-virtual-environment)
 ---
 
 ## Python Flask TypeError send_file
@@ -112,4 +113,19 @@ cat /etc/locale.conf
 
 ## Or just add
 echo 'export LC_MESSAGES=en_US.UTF-8' >> ~/.bashrc
+```
+
+## Python Virtual Environment
+- When, e.g. using `pip` or just playing around and not f_ck up system `python`, use a virtual environment
+
+```bash
+# Install python3-venv before
+# Create
+python -m venv /path/to/dir
+
+# Activate
+source /path/to/dir/bin/activate
+
+# Disable
+deactivate
 ```
