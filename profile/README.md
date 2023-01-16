@@ -51,7 +51,7 @@ Everything which gots forgotten from time to time.
 - [Database related](content/lost-and-found/defa/db.md)
 - [Virtualisation related](content/lost-and-found/defa/virt.md)
 - [Web related](content/lost-and-found/defa/web.md)
-- [Programing related](content/lost-and-found/defa/prog.md)
+- [Programming related](content/lost-and-found/defa/prog.md)
 - [Misc](content/lost-and-found/defa/misc.md)
 
 ### More or Less Exploitation Stuff
@@ -68,4 +68,6 @@ Everyting which is needed from time to time, or just cause it is nice to know.
 - [Shellcode](content/links/sc.md)
 - [Exploit Development](content/links/expldev.md)
 - [Capture the Flag](content/links/ctf.md)
+- [Linux](content/links/linux.md)
+- [Windows](content/links/win.md)
 - [Misc](content/links/misc.md)
