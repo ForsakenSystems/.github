@@ -45,7 +45,7 @@ Some wannebe write-ups or maybe other content which nobody is interested in ^^
 Follow **[Team localos](http://localos.io)**, mainly interessted in building CTFs for fun.
 
 # Lost and Found
-Everything which gots forgotten from time to time.
+Everything which got forgotten from time to time.
 
 ### More or Less Default Stuff
 - [Database related](content/lost-and-found/defa/db.md)
