@@ -4,6 +4,7 @@
 
 ### Table of Contents
 - [SSH Multiple Identities](#ssh-multiple-identities)
+- [Grub Rescure Shell vs LUKS](#grub-rescue-shell-vs-luks)
 
 ---
 
@@ -23,4 +24,19 @@ host myhost
   IdentitiesOnly yes
 ```
 
+## Grub Rescue Shell vs LUKS
+- Deppending on the setup (here: `boot` encrypted), it might happen, that some get dropped into `grub rescue shell` when `luks` failed to decrypt
 
+```sh
+# id partition to decrypt, e.g. hd0
+ls
+
+# mount with or without using UUID (-u)
+cryptomount (hd0,gpt2)
+
+# Enter passphrase and if slot gets opened load "normal" module
+insmod normal
+
+# Boot as usual
+normal
+```
