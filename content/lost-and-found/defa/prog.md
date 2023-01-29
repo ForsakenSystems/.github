@@ -6,6 +6,8 @@
 - [Python Flask TypeError send_file](#python-flask-typeerror-send-file)
 - [Perlbrew](#perlbrew)
 - [Python Virtual Environment](#python-virtual-environment)
+- [Powershell Grep Like Before After](#ps-grep-like-before-after)
+
 ---
 
 ## Python Flask TypeError send_file
@@ -128,4 +130,16 @@ source /path/to/dir/bin/activate
 
 # Disable
 deactivate
+```
+
+## Powershell Grep Like Before After
+- Sometimes it would be great to have something like a `before`/`after` in Windows, e.g. when playing with `netstat`
+
+```powershell
+# Shows one line before and one after match
+netstat -anbo | Select-String -Context 1 testbinary
+
+    TCP    0.0.0.0:12345          0.0.0.0:0              ABHÖREN         7508
+>  [testbinary.exe]
+    TCP    192.168.0.2:139       0.0.0.0:0              ABHÖREN         4
 ```

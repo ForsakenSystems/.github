@@ -5,7 +5,7 @@
 ### Table of Contents
 - [SSH Multiple Identities](#ssh-multiple-identities)
 - [Grub Rescure Shell vs LUKS](#grub-rescue-shell-vs-luks)
-
+- [Convert m4a to mp3](#convert-m4a-to-mp3)
 ---
 
 ## SSH Multiple Identities
@@ -39,4 +39,16 @@ insmod normal
 
 # Boot as usual
 normal
+```
+
+## Convert m4a to mp3
+- Converting between different audio formats, e.g. `m4a` to `mp3`
+
+```bash
+# -v ... verbosity
+# -y ... overwrite outputfile
+# -acodec ... set audio codec
+# -ac ... number of audio channels 
+# -ab ... bit rate of audio
+ffmpeg -v 5 -y -i INFILE.m4a -acodec libmp3lame -ac 2 -ab 192k OUTFILE.mp3
 ```
