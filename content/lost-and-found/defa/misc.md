@@ -56,7 +56,7 @@ ffmpeg -v 5 -y -i INFILE.m4a -acodec libmp3lame -ac 2 -ab 192k OUTFILE.mp3
 ```
 
 ## Linux Which Route
-- On a system with multiple routes or huge routing tables, it is sometime very helpful to know exactly which route would be used beforehand
+- On a system with multiple routes or huge routing tables, it is sometime very helpful to know exactly which `route` would be used beforehand
 
 ```bash
 ip route get 8.8.8.8
