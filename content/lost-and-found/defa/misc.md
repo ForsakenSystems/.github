@@ -6,7 +6,7 @@
 - [SSH Multiple Identities](#ssh-multiple-identities)
 - [Grub Rescure Shell vs LUKS](#grub-rescue-shell-vs-luks)
 - [Convert m4a to mp3](#convert-m4a-to-mp3)
-- [Some Linux IP Commands](#some-linux-ip-commmands)
+- [Some Linux IP Commands](#some-linux-ip-commands)
 
 ---
 
