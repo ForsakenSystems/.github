@@ -6,7 +6,7 @@
 - [SSH Multiple Identities](#ssh-multiple-identities)
 - [Grub Rescure Shell vs LUKS](#grub-rescue-shell-vs-luks)
 - [Convert m4a to mp3](#convert-m4a-to-mp3)
-- [Linux Which Route](#linux-which-route)
+- [Some Linux IP Commands](#some-linux-ip-commmands)
 
 ---
 
@@ -55,9 +55,17 @@ normal
 ffmpeg -v 5 -y -i INFILE.m4a -acodec libmp3lame -ac 2 -ab 192k OUTFILE.mp3
 ```
 
-## Linux Which Route
-- On a system with multiple routes or huge routing tables, it is sometime very helpful to know exactly which `route` would be used beforehand
+## Some Linux IP Commands
+- Of course `RTFM` would work, too ... but still having some stuff in one place is better ^^ 
 
 ```bash
+# On a system with multiple routes or huge routing tables, it might be helpful to know exactly which `route` would be used beforehand
 ip route get 8.8.8.8
+
+# No arp command? No problem
+ip neighbour show
+
+# Need a vlan? ... do not forget to turn the device on (up), incl. the parent
+ip l a link ethXYZ name ethXYZ.42 type vlan id 42
+
 ```
