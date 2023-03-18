@@ -70,10 +70,10 @@ BOOL WriteProcessMemory(
 
 ```python
 wpm = pack('<L', 0x41414141)   # WriteProcessMemory addy
-wpm += pack('<L', 0x42424242)   # shellcode return addy to return to, after WriteProcessMemory was called
+wpm += pack('<L', 0x42424242)   # shellcode return addy to return to, after WriteProcessMemory was called (code cave)
 wpm += pack('<L', 0xffffffff)   # hProcess ---> pseudo Process handle ---> -1
-wpm += pack('<L', 0x44444444)   # lpBaseAddress ---> addy of code cave
-wpm += pack('<L', 0x45454545)   # lpBuffer ---> shellcode addy
+wpm += pack('<L', 0x44444444)   # lpBaseAddress ---> addy of code cave (same as above, dst)
+wpm += pack('<L', 0x45454545)   # lpBuffer ---> shellcode addy (src)
 wpm += pack('<L', 0x46464646)   # nSize ---> shellcode size
 wpm += pack('<L', 0x47474747)   # lpNumberOfBytesWritten ---> writable memory addy
 ```
