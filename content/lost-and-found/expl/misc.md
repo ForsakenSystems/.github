@@ -6,6 +6,7 @@
 - [Simple Webserver](#simple-webserver)
 - [Simple SMTP Server](#simple-smtp-server)
 - [Simple SMB Server](#simple-smb-server)
+- [Simple WebDAV Server](#simple-webdav-server)
 
 ---
 
@@ -44,7 +45,7 @@ ruby -run -ehttpd . -p9090
 
 ```bash
 # Add -c DebuggingServer for discard msg
-sudo python3 -m smtpd -n 0.0.0.0:25
+python3 -m smtpd -n 0.0.0.0:25
 ```
 
 ## Simple SMB Server
@@ -53,8 +54,16 @@ sudo python3 -m smtpd -n 0.0.0.0:25
 ```bash
 # Needy options: -smb2support -user USER -password PASS
 # https://raw.githubusercontent.com/SecureAuthCorp/impacket/master/examples/smbserver.py
-sudo python3 smbserver.py SHARENAME .
+python3 smbserver.py SHARENAME .
 
 # If impacket stuff is installed
-sudo impacket-smbserver SHARENAME .
+impacket-smbserver SHARENAME .
+```
+
+## Simple WebDAV Server
+- Python
+
+```bash
+# Maybe install package python-wsgidav/python3-wsgidav or similar, otherwise use pip/pip3 install wsgidav
+wsgidav --host=0.0.0.0 --port=80 --auth=anonymous --root /directory
 ```
