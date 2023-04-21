@@ -3,8 +3,8 @@
 ---
 
 ### Table of Contents
-- [Run Powershell Elevated](run-powershell-elevated)
-- [Disable Windows Defender](disable-windows-defender)
+- [Run Powershell Elevated](#run-powershell-elevated)
+- [Disable Windows Defender](#disable-windows-defender)
 
 ---
 
