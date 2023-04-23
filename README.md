@@ -57,6 +57,7 @@ Everything which got forgotten from time to time.
 ### More or Less Exploitation Stuff
 - [Skeletons](content/lost-and-found/expl/skel.md)
 - [Shell related](content/lost-and-found/expl/shell.md)
+- [Windows](content/lost-and-found/expl/windows.md)
 - [Misc](content/lost-and-found/expl/misc.md)
 
 # Link Sedimentation Tank
