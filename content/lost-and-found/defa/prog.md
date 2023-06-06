@@ -7,7 +7,7 @@
 - [Perlbrew](#perlbrew)
 - [Python Virtual Environment](#python-virtual-environment)
 - [Powershell Grep Like Before After](#powershell-grep-like-before-after)
-- [C++ int 3 Instruction](#c++-int-3-intruction)
+- [C++ int 3 Instruction](#c++-int-3-instruction)
 
 ---
 
