@@ -47,7 +47,7 @@ LPVOID VirtualAlloc(
 ```
 
 ```python
-va = 0x41414141   # VirtualAlloc addy
+va = 0x41414141               # VirtualAlloc addy
 va += pack('<L', 0x42424242)  # shellcode return addy to return to, after VirtualAlloc was called
 va += pack('<L', 0x43434343)  # lpAddress ---> shellcode addy (same as above)
 va += pack('<L', 0x44444444)  # dwSize ---> 0x1
@@ -69,7 +69,7 @@ BOOL WriteProcessMemory(
 ```
 
 ```python
-wpm = pack('<L', 0x41414141)   # WriteProcessMemory addy
+wpm = pack('<L', 0x41414141)    # WriteProcessMemory addy
 wpm += pack('<L', 0x42424242)   # shellcode return addy to return to, after WriteProcessMemory was called (code cave)
 wpm += pack('<L', 0xffffffff)   # hProcess ---> pseudo Process handle ---> -1
 wpm += pack('<L', 0x44444444)   # lpBaseAddress ---> addy of code cave (same as above, dst)
