@@ -7,6 +7,7 @@
 - [Perlbrew](#perlbrew)
 - [Python Virtual Environment](#python-virtual-environment)
 - [Powershell Grep Like Before After](#powershell-grep-like-before-after)
+- [C++ int 3 Instruction](#c++-int-3-intruction)
 
 ---
 
@@ -142,4 +143,17 @@ netstat -anbo | Select-String -Context 1 testbinary
     TCP    0.0.0.0:12345          0.0.0.0:0              ABHÖREN         7508
 >  [testbinary.exe]
     TCP    192.168.0.2:139       0.0.0.0:0              ABHÖREN         4
+```
+
+# C++ int 3 Instruction
+- 32 bit
+
+```c++
+__asm int 3
+```
+
+- 64 bit
+
+```c++
+__debugbreak()
 ```
