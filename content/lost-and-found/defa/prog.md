@@ -156,7 +156,8 @@ __asm int 3
 - 64 bit
 
 ```c++
-__debugbreak()
+__debugbreak();
+DebugBreak();
 ```
 
 ## Diff and Visual Studio
