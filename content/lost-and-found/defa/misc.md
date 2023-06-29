@@ -7,6 +7,7 @@
 - [Grub Rescure Shell vs LUKS](#grub-rescue-shell-vs-luks)
 - [Convert m4a to mp3](#convert-m4a-to-mp3)
 - [Some Linux IP Commands](#some-linux-ip-commands)
+- [Git Reduce Threads Used](#git-reduce-threads-used)
 
 ---
 
@@ -69,3 +70,11 @@ ip neighbour show
 ip l a link ethXYZ name ethXYZ.42 type vlan id 42
 
 ```
+
+## Git Reduce Threads Used
+- Reducing the threads, which are used by `git` client (here: only for the current push)
+
+```bash
+git -c pack.threads=1 push
+```
+
