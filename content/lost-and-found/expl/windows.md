@@ -9,7 +9,7 @@
 - [WinDbg Fu](#windbg-fu)
 	- [Grep Like Feature](#grep-like-feature)
 	- [ASCII to DWORDS](#ascii-to-dwords)
-
+	- [Levels not Implemented for This Platform](#levels-not-implemented-for-this-platform)
 ---
 
 # Run Powershell Elevated
@@ -98,6 +98,23 @@ dd rsp+8 L8
 	00000044`cf0fff00  6e77705c 74656d5c 6c6c642e 00000000
 ```
 
+### Levels not Implemented for This Platform
+- If `pte` command, e.g `!pte 0x0` reports `Levels not implemented for this platform`, a reboot of the system might help
+- If this happens during kernel debugging, it might help to reboot both, debugger and debuggee
+
+```powershell
+!pte 0x0
+	Levels not implemented for this platform
+
+# reboot
+
+!pte 0x0
+	                                           VA 0000000000000000
+	PXE at FFFFADD6EB75B000    PPE at FFFFADD6EB600000    PDE at FFFFADD6C0000000    PTE at FFFFAD8000000000
+	contains 8A00000082A29867  contains 0000000000000000
+	pfn 82a29     ---DA--UW-V  contains 0000000000000000
+	not valid
+```
 
 
 
