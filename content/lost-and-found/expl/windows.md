@@ -5,6 +5,7 @@
 ### Table of Contents
 - [Run Powershell Elevated](#run-powershell-elevated)
 - [Disable Windows Defender](#disable-windows-defender)
+- [Creating low Integrity cmd](#creating-low-integrity-cmd)
 
 ---
 
@@ -48,4 +49,23 @@ Set-MpPreference -ExclusionPath PATH_HERE
 
 # Disable application guard
 Disable-WindowsOptionalFeature -FeatureName "Windows-Defender-ApplicationGuard" -Online
+```
+
+## Creating low Integrity cmd
+- Creating cmd.exe with low integrity (here: from commmon cmd.exe, which runs by default as medium integrity)
+- Same works for switching to high integrity, but this has to be done with elevated privileges: high > medium > low
+
+```powershell
+copy C:\Windows\System32\cmd.exe cmd_low.exe
+
+icacls cmd_low.exe /setintegritylevel low
+
+icacls.exe cmd_low.exe
+	cmd_low.exe NT AUTHORITY\SYSTEM:(F)
+	               BUILTIN\Administrators:(F)
+	               PC\useer:(F)
+	               NT AUTHORITY\SYSTEM:(I)(F)
+	               BUILTIN\Administrators:(I)(F)
+	               PC\user:(I)(F)
+	               Mandatory Label\Low Mandatory Level:(NW)
 ```

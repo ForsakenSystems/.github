@@ -8,6 +8,7 @@
 - [Python Virtual Environment](#python-virtual-environment)
 - [Powershell Grep Like Before After](#powershell-grep-like-before-after)
 - [C++ int 3 Instruction](#c-int-3-instruction)
+- [Diff and Visual Studio](#diff-and-visual-studio)
 
 ---
 
@@ -156,4 +157,11 @@ __asm int 3
 
 ```c++
 __debugbreak()
+```
+
+## Diff and Visual Studio
+- Fast diff-like feature from developer console
+
+```powershell
+devenv.exe /diff file1 file2
 ```
