@@ -119,7 +119,7 @@ dd rsp+8 L8
 ```
 
 ### SMAP During Debugging
-- If Supervisor Mode Access Prevention (SMAP) comea in your way during debugging, this might be useful
+- If Supervisor Mode Access Prevention (SMAP) comes in your way during debugging, this might be useful
 
 ```powershell
 r cr4
