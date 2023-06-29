@@ -6,6 +6,9 @@
 - [Run Powershell Elevated](#run-powershell-elevated)
 - [Disable Windows Defender](#disable-windows-defender)
 - [Creating low Integrity cmd](#creating-low-integrity-cmd)
+- [WinDbg Fu](#windbg-fu)
+	- [Grep Like Feature](#grep-like-feature)
+	- [ASCII to DWORDS](#ascii-to-dwords)
 
 ---
 
@@ -69,3 +72,37 @@ icacls.exe cmd_low.exe
 	               PC\user:(I)(F)
 	               Mandatory Label\Low Mandatory Level:(NW)
 ```
+
+## WinDbg Fu
+- Just some `WinDbg` commands for the lazy
+
+### Grep Like Feature
+- Grep like feature by using `.shell` command
+
+```powershell
+.shell -ci "lm" findstr /i kern 
+```
+
+### ASCII to DWORDS
+- Create DWORDS from an ASCII string, useful for in terms of, e.g. shellcoding
+- Same works for `unicode` with `eu`
+
+```powershell
+ea rsp+8 "\\\\192.168.73.128\\pwn\\met.dll"
+da rsp+8
+	00000044`cf0ffef0  "\\192.168.73.128\pwn\met.dll"
+dd rsp+8 L8
+	00000044`cf0ffef0  39315c5c 36312e32 33372e38 3832312e
+	00000044`cf0fff00  6e77705c 74656d5c 6c6c642e 00000000
+```
+
+
+
+
+
+
+
+
+
+
+
