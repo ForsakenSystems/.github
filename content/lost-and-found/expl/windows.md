@@ -10,6 +10,8 @@
 	- [Grep Like Feature](#grep-like-feature)
 	- [ASCII to DWORDS](#ascii-to-dwords)
 	- [Levels not Implemented for This Platform](#levels-not-implemented-for-this-platform)
+	- [SMAP During Debugging](#smap-during-debugging)
+
 ---
 
 # Run Powershell Elevated
@@ -116,7 +118,19 @@ dd rsp+8 L8
 	not valid
 ```
 
+### SMAP During Debugging
+- If Supervisor Mode Access Prevention (SMAP) comea in your way during debugging, this might be useful
 
+```powershell
+r cr4
+	cr4=0000000000370678
+
+# switch 3 to 1
+r cr4=0000000000170678
+
+r cr4
+	cr4=0000000000170678
+```
 
 
 
