@@ -9,6 +9,7 @@
 - [Some Linux IP Commands](#some-linux-ip-commands)
 - [Git Reduce Threads Used](#git-reduce-threads-used)
 - [Kali EXPKEYSIG](#kali-expkeysig)
+- [Windows Share Across Users](#windows-share-across-users)
 
 ---
 
@@ -86,3 +87,10 @@ git -c pack.threads=1 push
 apt install kali-archive-keyring
 ```
 
+## Windows Share Across Users
+- If you have connected a network share for a certain user and want to access it, e.g. via an elevated powershell it might not be visable (e.g. caused by UAC)
+
+```powershell
+# create/set DWORD to 1
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLinkedConnections
+```
