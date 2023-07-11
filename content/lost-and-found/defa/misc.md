@@ -8,6 +8,7 @@
 - [Convert m4a to mp3](#convert-m4a-to-mp3)
 - [Some Linux IP Commands](#some-linux-ip-commands)
 - [Git Reduce Threads Used](#git-reduce-threads-used)
+- [Kali EXPKEYSIG](#kali-expkeysig)
 
 ---
 
@@ -76,5 +77,12 @@ ip l a link ethXYZ name ethXYZ.42 type vlan id 42
 
 ```bash
 git -c pack.threads=1 push
+```
+
+## Kali EXPKEYSIG
+- If you encounter something like `The following signatures were invalid: EXPKEYSIG ...` the following might be a better idea than loading and adding the key manually
+
+```bash
+apt install kali-archive-keyring
 ```
 
