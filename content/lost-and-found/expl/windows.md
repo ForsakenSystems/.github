@@ -119,13 +119,14 @@ dd rsp+8 L8
 ```
 
 ### SMAP During Debugging
-- If Supervisor Mode Access Prevention (SMAP) comes in your way during debugging, this might be useful
+- If Supervisor Mode Access Prevention (SMAP, bit 21) comes in your way during debugging, this might be useful
+- For Supervisor Mode Execution Prevention (SMEP, bit 20) needs to be zeroed out
 
 ```powershell
 r cr4
 	cr4=0000000000370678
 
-# switch 3 to 1
+# switch 3 to 1, zero'ing out bit 21
 r cr4=0000000000170678
 
 r cr4
