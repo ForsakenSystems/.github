@@ -8,6 +8,7 @@
 - [VMWare](#vmware)
   * [Missing Manifest](#missing-manifest)
   * [Export VMs From ESX Without vCenter](#export-vms-from-esx-without-vcenter)
+  * [Workstation vTPM](#workstation-vtpm)
 - [Proxmox](#proxmox)
   * [Import OVA or VMDK](#import-ova-or-vmdk)
 
@@ -52,6 +53,18 @@ chmod +x /vmfs/volumes/someDatastore/vmware-ovftool/ovftool
 ./ovftool --noSSLVerify vi://A.B.C.D/dir_of_vm_to_export /vmfs/volumes/someDatastore/exported_vm.ova
 ```
 
+### Workstation vTPM
+- Want to simulate stuff or just need a virtual `TPM`, this might help
+- Make sure to upgrad to highest possible hardware compatibility if possible
+- After doing the following the system should be encrypted and having `vTPM` enabled
+
+```bash
+# Edit vmx file / add to it
+managedvm.autoAddVTPM = "software"
+vtpm.present = "TRUE"
+firmware="efi"
+```
+
 ## Proxmox
 Stuff related to `proxmox`.
 
@@ -66,5 +79,4 @@ tar xvf vm_to_import.ova
 # Import and convert
 qm importdisk target_vm_id vm_to_import_disk.vmdk local -format qcow2
 ```
-
 
