@@ -10,7 +10,7 @@
 - [Git Reduce Threads Used](#git-reduce-threads-used)
 - [Kali EXPKEYSIG](#kali-expkeysig)
 - [Windows Share Across Users](#windows-share-across-users)
-- [Remmina Not oennecting to Windows](#remmina-not-connecting-to-windows)
+- [Remmina Not Connecting to Windows](#remmina-not-connecting-to-windows)
 
 ---
 
@@ -96,7 +96,7 @@ apt install kali-archive-keyring
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLinkedConnections
 ```
 
-# Remmina Not oennecting to Windows
+# Remmina Not Connecting to Windows
 - If `remmina` struggles to successfully connect to a Windows via `rdp`, this could have a lot of possible causes
 - Most of the time if the connection is stable etc., the problem might be caused by `tls` settings
 
