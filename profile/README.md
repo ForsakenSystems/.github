@@ -58,8 +58,8 @@ Everything which got forgotten from time to time.
 - [Skeletons](content/lost-and-found/expl/skel.md)
 - [Shell related](content/lost-and-found/expl/shell.md)
 - [Windows](content/lost-and-found/expl/windows.md)
+- [TeX exam templates OffSec](https://github.com/solacol/offsec-tex-exam-templates)
 - [Misc](content/lost-and-found/expl/misc.md)
-- [Exam templates OffSec](https://github.com/solacol/offsec-tex-exam-templates)
 
 # Link Sedimentation Tank
 Everyting which is needed from time to time, or just cause it is nice to know.
