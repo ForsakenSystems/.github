@@ -97,7 +97,7 @@ apt install kali-archive-keyring
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableLinkedConnections
 ```
 
-# Remmina Not Connecting to Windows
+## Remmina Not Connecting to Windows
 - If `remmina` struggles to successfully connect to a Windows via `rdp`, this could have a lot of possible causes
 - Most of the time if the connection is stable etc., the problem might be caused by `tls` settings
 
@@ -111,7 +111,7 @@ Protocol security negotiation failure.
 - What might help is playing arroud with the `Security protocol negotiation` advanced setting and ...
 - Enable/disable `Glyph cache` and/or `Relax order checks` advanced setting
 
-# Exim Mail Queue CleanUp
+## Exim Mail Queue CleanUp
 - Check and clean-up `exim` mail queue fast
 
 ```bash

@@ -67,3 +67,4 @@ impacket-smbserver SHARENAME .
 # Maybe install package python-wsgidav/python3-wsgidav or similar, otherwise use pip/pip3 install wsgidav
 wsgidav --host=0.0.0.0 --port=80 --auth=anonymous --root /directory
 ```
+
