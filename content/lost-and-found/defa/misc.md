@@ -11,6 +11,7 @@
 - [Kali EXPKEYSIG](#kali-expkeysig)
 - [Windows Share Across Users](#windows-share-across-users)
 - [Remmina Not Connecting to Windows](#remmina-not-connecting-to-windows)
+- [Exim Mail Queue CleanUp](#exim-mail-queue-cleanup)
 
 ---
 
@@ -109,3 +110,17 @@ Protocol security negotiation failure.
 
 - What might help is playing arroud with the `Security protocol negotiation` advanced setting and ...
 - Enable/disable `Glyph cache` and/or `Relax order checks` advanced setting
+
+# Exim Mail Queue CleanUp
+- Check and clean-up `exim` mail queue fast
+
+```bash
+# check/view
+exim -bp
+
+# flush (forced even for frozen msg)
+exim -qff
+
+# delete all from queue
+exiqgrep -i | xargs exim -Mrm
+```
