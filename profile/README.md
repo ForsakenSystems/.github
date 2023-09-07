@@ -52,6 +52,8 @@ Everything which got forgotten from time to time.
 - [Virtualisation related](content/lost-and-found/defa/virt.md)
 - [Web related](content/lost-and-found/defa/web.md)
 - [Programming related](content/lost-and-found/defa/prog.md)
+- [Windows](content/lost-and-found/defa/windows.md)
+- [Linux](content/lost-and-found/defa/linux.md)
 - [Misc](content/lost-and-found/defa/misc.md)
 
 ### More or Less Exploitation Stuff
