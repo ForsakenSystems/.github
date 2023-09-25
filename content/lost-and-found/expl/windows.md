@@ -6,7 +6,7 @@
 - [Run Powershell Elevated](#run-powershell-elevated)
 - [Disable Windows Defender](#disable-windows-defender)
 - [Creating low Integrity cmd](#creating-low-integrity-cmd)
-- [Powershell Double Hop](#powershell-doube-hop)
+- [Powershell Double Hop](#powershell-double-hop)
 - [WinDbg Fu](#windbg-fu)
 	- [Grep Like Feature](#grep-like-feature)
 	- [ASCII to DWORDS](#ascii-to-dwords)
