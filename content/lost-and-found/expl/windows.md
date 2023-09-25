@@ -6,6 +6,7 @@
 - [Run Powershell Elevated](#run-powershell-elevated)
 - [Disable Windows Defender](#disable-windows-defender)
 - [Creating low Integrity cmd](#creating-low-integrity-cmd)
+- [Powershell Double Hop](#powershell-doube-hop)
 - [WinDbg Fu](#windbg-fu)
 	- [Grep Like Feature](#grep-like-feature)
 	- [ASCII to DWORDS](#ascii-to-dwords)
@@ -74,6 +75,18 @@ icacls.exe cmd_low.exe
 	               BUILTIN\Administrators:(I)(F)
 	               PC\user:(I)(F)
 	               Mandatory Label\Low Mandatory Level:(NW)
+```
+
+## Powershell Double Hop
+- PowerShell remoting does not allow to pass credentials, which might lead to the well known (kerberos) double hop problem
+- In some cases it can be solved by doing the following (here: with powerview example executed from winrm session)
+
+```powershell
+# create credential object
+$creds = New-Object System.Management.Automation.PSCredential('DOM\user', (ConvertTo-SecureString 'securePw' -AsPlainText -Force))
+
+# use it
+Get-DomainUser -AllowDelegation -AdminCount -Properties distinguishedname -Credential $creds
 ```
 
 ## WinDbg Fu
