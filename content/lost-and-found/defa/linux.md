@@ -10,6 +10,7 @@
 - [Kali EXPKEYSIG](#kali-expkeysig)
 - [Remmina Not Connecting to Windows](#remmina-not-connecting-to-windows)
 - [Exim Mail Queue CleanUp](#exim-mail-queue-cleanup)
+- [Temp Change Language](#temp-change-language)
 
 ---
 
@@ -106,4 +107,11 @@ exim -qff
 
 # delete all from queue
 exiqgrep -i | xargs exim -Mrm
+```
+
+## Temp Change Language
+- Sometimes you might need to change the language for only one command, e.g. if you have set you system language to spanish and would like to have the error output of a command in english
+
+```bash
+LANG=C $somecommand
 ```
