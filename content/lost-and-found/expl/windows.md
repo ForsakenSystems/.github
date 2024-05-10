@@ -205,7 +205,7 @@ r cr4
 bp ntdll+31337 ".printf \"alloc(0x%x) = 0x%p from 0x%p \\n\", poi(rsp+50), rax, poi(rsp); g"
 ```
 
-- Compare QWORD in register at offset `0x18` with value `0x300` (processor breakpoint)
+- Compare `QWORD` in register `rcx` at offset `0x18` with value `0x300` (processor breakpoint)
 ```powershell
 ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18 L1; } .else { gc; }
 ```
