@@ -13,6 +13,7 @@
 	- [Levels not Implemented for This Platform](#levels-not-implemented-for-this-platform)
 	- [SMAP During Debugging](#smap-during-debugging)
 	- [Mona in WinDbg](#mona-in-windbg)
+	- [Conditional Breakpoints](#conditional-breakpoints)
 
 ---
 
@@ -198,11 +199,16 @@ r cr4
   - `!py mona getiat -cm aslr=false,rebase=false -s [MODULE NAME]`
 
 
+### Conditional Breakpoints
+- Simple software breakpoint to print some values (no conditional breakpoint)
+```powershell
+bp ntdll+31337 ".printf \"alloc(0x%x) = 0x%p from 0x%p \\n\", poi(rsp+50), rax, poi(rsp); g"
+```
 
-
-
-
-
+- Compare QWORD in register at offset `0x18` with value `0x300` (processor breakpoint)
+```powershell
+ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18 L1; } .else { gc; }
+```
 
 
 
