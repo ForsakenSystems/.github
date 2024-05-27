@@ -95,6 +95,11 @@ Protocol security negotiation failure.
 - What might help is playing arroud with the `Security protocol negotiation` advanced setting and ...
 - Enable/disable `Glyph cache` and/or `Relax order checks` advanced setting
 
+## Remminat Not Connection to Windows Server ( KB5039705 and freerdp v3 )
+- If `remmina` is unable to connect to Windows via `rdp` and no error message is displayed and just connecting `...`, this could be a kerberos problem
+- check the correct domain in the config for the Windows host you are trying to connect
+- if the host is not part of a domain just use `.\`
+
 ## Exim Mail Queue CleanUp
 - Check and clean-up `exim` mail queue fast
 
