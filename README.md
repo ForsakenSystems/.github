@@ -38,8 +38,8 @@ That said, some of the stuff might be ...
 # Just Stuff
 Some wannebe write-ups or maybe other content which nobody is interested in ^^
 
-- [Wannebes](content/stuff/wannebes.md)
-- [More or less research](content/stuff/research.md)
+- [Wannebes](https://github.com/ForsakenSystems/.github/blob/main/content/stuff/wannebes.md)
+- [More or less research](https://github.com/ForsakenSystems/.github/blob/main/content/stuff/research.md)
 
 # Capture the Flag
 Follow **[Team localos](http://localos.io)**, mainly interessted in building CTFs for fun.
@@ -48,30 +48,30 @@ Follow **[Team localos](http://localos.io)**, mainly interessted in building CTF
 Everything which got forgotten from time to time.
 
 ### More or Less Default Stuff
-- [Database related](content/lost-and-found/defa/db.md)
-- [Virtualisation related](content/lost-and-found/defa/virt.md)
-- [Web related](content/lost-and-found/defa/web.md)
-- [Programming related](content/lost-and-found/defa/prog.md)
-- [Windows](content/lost-and-found/defa/windows.md)
-- [Linux](content/lost-and-found/defa/linux.md)
-- [Misc](content/lost-and-found/defa/misc.md)
+- [Database related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/db.md)
+- [Virtualisation related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/virt.md)
+- [Web related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/web.md)
+- [Programming related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/prog.md)
+- [Windows](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/windows.md)
+- [Linux](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/linux.md)
+- [Misc](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/misc.md)
 
 ### More or Less Exploitation Stuff
-- [Skeletons](content/lost-and-found/expl/skel.md)
-- [Shell related](content/lost-and-found/expl/shell.md)
-- [Windows](content/lost-and-found/expl/windows.md)
+- [Skeletons](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/skel.md)
+- [Shell related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/shell.md)
+- [Windows](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/windows.md)
 - [TeX exam templates OffSec](https://github.com/solacol/offsec-tex-exam-templates)
-- [Misc](content/lost-and-found/expl/misc.md)
+- [Misc](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/misc.md)
 
 # Link Sedimentation Tank
 Everyting which is needed from time to time, or just cause it is nice to know.
 
-- [Reverse Engineering](content/links/re.md)
-- [Online Compiler and Disassembler](content/links/disa.md)
-- [Programming](content/links/prog.md)
-- [Shellcode](content/links/sc.md)
-- [Exploit Development](content/links/expldev.md)
-- [Capture the Flag](content/links/ctf.md)
-- [Linux](content/links/linux.md)
-- [Windows](content/links/win.md)
-- [Misc](content/links/misc.md)
+- [Reverse Engineering](https://github.com/ForsakenSystems/.github/blob/main/content/links/re.md)
+- [Online Compiler and Disassembler](https://github.com/ForsakenSystems/.github/blob/main/content/links/disa.md)
+- [Programming](https://github.com/ForsakenSystems/.github/blob/main/content/links/prog.md)
+- [Shellcode](https://github.com/ForsakenSystems/.github/blob/main/content/links/sc.md)
+- [Exploit Development](https://github.com/ForsakenSystems/.github/blob/main/content/links/expldev.md)
+- [Capture the Flag](https://github.com/ForsakenSystems/.github/blob/main/content/links/ctf.md)
+- [Linux](https://github.com/ForsakenSystems/.github/blob/main/content/links/linux.md)
+- [Windows](https://github.com/ForsakenSystems/.github/blob/main/content/links/win.md)
+- [Misc](https://github.com/ForsakenSystems/.github/blob/main/content/links/misc.md)
