@@ -11,6 +11,7 @@
 - [Remmina Not Connecting to Windows](#remmina-not-connecting-to-windows)
 - [Exim Mail Queue CleanUp](#exim-mail-queue-cleanup)
 - [Temp Change Language](#temp-change-language)
+- [Convert From Binary to ASCII](#convert-from-binary-to-ascii)
 
 ---
 
@@ -119,4 +120,12 @@ exiqgrep -i | xargs exim -Mrm
 
 ```bash
 LANG=C $somecommand
+```
+
+## Convert From Binary to ASCII
+- Simple onliner
+
+```bash
+echo "011000110111100101100010011001010111001" | perl -lpe '$_=pack"B*",$_'
+cyber
 ```
