@@ -9,6 +9,7 @@
   * [Missing Manifest](#missing-manifest)
   * [Export VMs From ESX Without vCenter](#export-vms-from-esx-without-vcenter)
   * [Workstation vTPM](#workstation-vtpm)
+  * [Vmxnet3 link speed displayed in VM](#Change-vmxnet3-link-speed-displayed-in-vm)
 - [Proxmox](#proxmox)
   * [Import OVA or VMDK](#import-ova-or-vmdk)
 
@@ -64,6 +65,19 @@ managedvm.autoAddVTPM = "software"
 vtpm.present = "TRUE"
 firmware="efi"
 ```
+
+### Change vmxnet3 link speed displayed in VM
+- Using a vmxnet3 interface in vm leads to a 10Gbps link displayed inside th vm
+- To change this link speed, power off the vm and edit Advanced Parametes of the vm
+- Add the following parameter (value of link speed between 10000 and 65000) - e.g. interface 0 and speed 65Gbps
+```bash
+ethernet0.linkspeed    65000
+```
+- Alternatively the parameter can be added to the vmx file (X - interface index, Y - speed)
+```bash
+ethernetX.linkspeed = "Y"
+```
+- This does only change the link speed displayed inside the vm, even a 1Gbps displayed ethernet link inside a vm can transfer as much as the physical nic of the esxi host can handle
 
 ## Proxmox
 Stuff related to `proxmox`.
