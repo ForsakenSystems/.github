@@ -15,6 +15,7 @@ Lets imagine this as a sedimentation tank or a typical incomin folder ... everyt
 - [RegExr](https://regexr.com/)
 - [regex101](https://regex101.com/)
 - [Regular-Expressions.info](https://www.regular-expressions.info/refcapture.html)
+- [Calc and Conversions](#cals-and-conversions)
 - ...
 
 
@@ -26,3 +27,9 @@ Lets imagine this as a sedimentation tank or a typical incomin folder ... everyt
 - [IEEE Xplore](https://ieeexplore.ieee.org/)
 - [ACM](https://www.acm.org/)
 - ...
+
+## Calc and Conversions
+- [RapidTables](https://www.rapidtables.com/)
+- [XOR Calculator](https://xor.pw/)
+- [CyberChef](https://gchq.github.io/CyberChef/)
+- [Invert](https://tomeko.net/online_tools/inv.php)
