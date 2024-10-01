@@ -6,7 +6,7 @@
 - [Git Reduce Threads Used](#git-reduce-threads-used)
 - [Git Adjust HTTP Post Buffer](#git-post-buffer)
 - [Git Change HTTP Version](#git-change-http-version)
-- [Git Remove file from history] (#Remove-file-from-git-history)
+- [Git Remove file from history](#remove-file-from-git-history)
 
 ---
 
