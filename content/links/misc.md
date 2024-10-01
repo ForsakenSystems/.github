@@ -8,7 +8,7 @@ Lets imagine this as a sedimentation tank or a typical incomin folder ... everyt
 ### Table of Contents
 - [RegEx](#regex)
 - [Paper/Publications](#publications)
-- [Calc and Conversions](#cals-and-conversions)
+- [Calc and Conversions](#calc-and-conversions)
 ---
 
 ## RegEx
