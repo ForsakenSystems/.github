@@ -8,14 +8,13 @@ Lets imagine this as a sedimentation tank or a typical incomin folder ... everyt
 ### Table of Contents
 - [RegEx](#regex)
 - [Paper/Publications](#publications)
-
+- [Calc and Conversions](#cals-and-conversions)
 ---
 
 ## RegEx
 - [RegExr](https://regexr.com/)
 - [regex101](https://regex101.com/)
 - [Regular-Expressions.info](https://www.regular-expressions.info/refcapture.html)
-- [Calc and Conversions](#cals-and-conversions)
 - ...
 
 
