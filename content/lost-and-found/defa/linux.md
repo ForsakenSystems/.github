@@ -12,6 +12,7 @@
 - [Exim Mail Queue CleanUp](#exim-mail-queue-cleanup)
 - [Temp Change Language](#temp-change-language)
 - [Convert From Binary to ASCII](#convert-from-binary-to-ascii)
+- [Rolling back package on Debian/Ubuntu](#rolling-back-package-on-debian)
 
 ---
 
@@ -128,4 +129,22 @@ LANG=C $somecommand
 ```bash
 echo "011000110111100101100010011001010111001" | perl -lpe '$_=pack"B*",$_'
 cyber
+```
+
+## Rolling back package on Debian
+- Check dpkg.log to package name and date 
+```bash
+cat /var/log/dpkg.log
+```
+- Get old / new version Number of the package during the determined date
+```bash
+awk '$1=="2024-09-29" && $3=="upgrade"' /var/log/dpkg.log
+```
+- Check if package is still on disk 
+```bash
+awk '$1=="2024-09-29" && $3=="upgrade" {gsub(/:/, "%3a", $5); split($4, f, ":"); print "/var/cache/apt/archives/" f[1] "_" $5 "_" f[2] ".deb"}' /var/log/dpkg.log | xargs -r ls -ld
+```
+- Install the old package
+```bash
+dpkg -i /var/cache/apt/archives/<PACKAGE_NAME>.deb
 ```
