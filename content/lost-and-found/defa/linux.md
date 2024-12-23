@@ -153,9 +153,9 @@ dpkg -i /var/cache/apt/archives/<PACKAGE_NAME>.deb
 ## Reset Admin Password pfSense
 - To reset the admin password of a pfSense two options are possible
   - First one is to connect via `ssh` or simple `console` and choose the corresponding option. This only works if no password protection is enabled.
-  - Second one is to connect via `console` and boot into `single user mode`
+  - Second one is to connect via `console` and boot into `single user mode` and use the following commands
 ```zsh
-# in single user mode (here: zfs)
+# in single user mode (filesystem zfs)
 /sbin/mount -u /
 
 /sbin/zfs mount -a
