@@ -53,7 +53,7 @@ Everything which got forgotten from time to time.
 - [Web related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/web.md)
 - [Programming related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/prog.md)
 - [Windows](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/windows.md)
-- [Linux](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/linux.md)
+- [Linux and BSD](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/linux.md)
 - [Misc](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/misc.md)
 
 ### More or Less Exploitation Stuff

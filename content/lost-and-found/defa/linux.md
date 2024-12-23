@@ -1,4 +1,4 @@
-# Linux
+# Linux and BSD
 
 ---
 
@@ -13,6 +13,7 @@
 - [Temp Change Language](#temp-change-language)
 - [Convert From Binary to ASCII](#convert-from-binary-to-ascii)
 - [Rolling back package on Debian/Ubuntu](#rolling-back-package-on-debian)
+- [Reset Admin Password pfSense](#reset-admin-password-pfsense)
 
 ---
 
@@ -148,3 +149,25 @@ awk '$1=="2024-09-29" && $3=="upgrade" {gsub(/:/, "%3a", $5); split($4, f, ":");
 ```bash
 dpkg -i /var/cache/apt/archives/<PACKAGE_NAME>.deb
 ```
+
+## Reset Admin Password pfSense
+- To reset the admin password of a pfSense two options are possible
+  - First one is to connect via `ssh` or simple `console` and choose the corresponding option. This only works if no password protection is enabled.
+  - Second one is to connect via `console` and boot into `single user mode`
+```zsh
+# in single user mode (here: zfs)
+/sbin/mount -u /
+
+/sbin/zfs mount -a
+
+/sbin/zfs mount pfSense/ROOT/default/cf
+
+/sbin/zfs mount pfSense/ROOT/default/var_db_pkg
+
+/etc/rc.initial.password
+
+/sbin/nextboot -D
+
+/etc/rc.reboot
+```
+
