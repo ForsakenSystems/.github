@@ -14,6 +14,7 @@
 - [Convert From Binary to ASCII](#convert-from-binary-to-ascii)
 - [Rolling back package on Debian/Ubuntu](#rolling-back-package-on-debian)
 - [Reset Admin Password pfSense](#reset-admin-password-pfsense)
+- [Create Bootable Windows From ISO](#create-bootable-windows-from-iso)
 
 ---
 
@@ -171,3 +172,11 @@ dpkg -i /var/cache/apt/archives/<PACKAGE_NAME>.deb
 /etc/rc.reboot
 ```
 
+## Create Bootable Windows From ISO
+- Since using just `dd` to create a bootable Windows install USB from an ISO is not working, `WoeUSB` might help
+- `ventoy` might also be ok
+```bash
+# WindowsXYZ ... windows install iso
+# sdb ... usb drive to install to
+woeusb --device WindowsXYZ.iso /dev/sdb
+```
