@@ -36,7 +36,7 @@ w32tm /query /status
 # Windows 11 Install Without Internet
 - Since `M$` is forcing to use a Microsoft account for installation of 11, hence an active internet connection, this sucks for some people
 - `Out of Office Experience` for the help
-```
+```cmd
 # Step through installation procedure until network requirements
 # Press 
 SHIFT + F10
