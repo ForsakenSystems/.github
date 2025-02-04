@@ -34,7 +34,7 @@ w32tm /resync
 w32tm /query /status
 ```
 
-# Windows 11 Install Without Internet
+## Windows 11 Install Without Internet
 - Since `M$` is forcing to use a Microsoft account for installation of 11, hence an active internet connection, this sucks for some people
 - `Out of Office Experience` for the help
 ```cmd
@@ -49,7 +49,7 @@ oobe\bypassnro.cmd
 # ... in the network requirements menu, you can now use the "I don't have internet" option
 ```
 
-# Hyper-V Nested Virtualization
+## Hyper-V Nested Virtualization
 - To enable nested virtualization or lets say the cpu feature needed
 ```ps
 # Choose tareget VM
