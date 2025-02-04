@@ -6,6 +6,7 @@
 - [Windows Share Across Users](#windows-share-across-users)
 - [Set Windows NTP Server](#set-windows-ntp-server)
 - [Windows 11 Install Without Internet](#windows-11-install-without-internet)
+- [HyperV Nested Virtualization](#hyper-v-nested-virtualization)
 ---
 
 ## Windows Share Across Users
@@ -46,4 +47,18 @@ oobe\bypassnro.cmd
 
 # after automatic reboot, step through installation procedure again ...
 # ... in the network requirements menu, you can now use the "I don't have internet" option
+```
+
+# HyperV Nested Virtualization
+- To enable nested virtualization or lets say the cpu feature needed
+```ps
+# Choose tareget VM
+Get-VM
+
+Name                                                                             State   CPUUsage(%) MemoryAssigned(M)
+----                                                                             -----   ----------- -----------------
+WinServer2025                                                                      Running 0           16192
+
+# Expose cpu features
+Set-VMProcessor -VMName 'WinServer2025' -ExposeVirtualizationExtensions $True
 ```
