@@ -7,6 +7,7 @@
 - [Set Windows NTP Server](#set-windows-ntp-server)
 - [Windows 11 Install Without Internet](#windows-11-install-without-internet)
 - [Hyper-V Nested Virtualization](#hyper-v-nested-virtualization)
+- [Remote Desktop Shared Folder Not Showing up](#remote-desktop-shared-folder-not-showing-up)
 ---
 
 ## Windows Share Across Users
@@ -62,3 +63,17 @@ WinServer2025                                                                   
 # Expose cpu features
 Set-VMProcessor -VMName 'WinServer2025' -ExposeVirtualizationExtensions $True
 ```
+
+## Remote Desktop Shared Folder Not Showing up
+- Linux user might have problems to redirect a shared folder to at least Windows 11 or Server 2025 when using `remmina` or `freexrdp`
+- A solution could be to do the following:
+  - use `gpgpedit.msc` to edit local group policy
+```ps
+Administrative Templates
+    Windows Components
+        Remote Desktop Services
+            Remote Desktop Session Host
+                Device and Resource Redirection
+```
+  - Set 'Do not allow drive redirection` to `enabled`
+
