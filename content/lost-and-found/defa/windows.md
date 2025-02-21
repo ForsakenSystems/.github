@@ -68,7 +68,7 @@ Set-VMProcessor -VMName 'WinServer2025' -ExposeVirtualizationExtensions $True
 - Linux user might have problems to redirect a shared folder to at least Windows 11 or Server 2025 when using `remmina` or `freexrdp`
 - A solution could be to do the following:
   - use `gpgpedit.msc` to edit local group policy
-  - Set `Do not allow drive redirection` to `enabled`
+  - Set `Do not allow drive redirection` to `disabled`
 ```ps
 Administrative Templates
     Windows Components
