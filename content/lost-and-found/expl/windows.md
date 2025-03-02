@@ -266,7 +266,7 @@ END
 ```
 
 - Windows 11 (adjusted `_EPROCESS`)
-```
+```asm
 _TEXT	SEGMENT
     shellcode PROC
             mov rax, QWORD PTR gs:[0188h]
