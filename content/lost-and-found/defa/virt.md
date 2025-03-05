@@ -10,9 +10,9 @@
   * [Export VMs From ESX Without vCenter](#export-vms-from-esx-without-vcenter)
   * [Workstation vTPM](#workstation-vtpm)
   * [Vmxnet3 link speed displayed in VM](#Change-vmxnet3-link-speed-displayed-in-vm)
+  * [VMWare Workstation Keyboard Delay](#vmware-workstation-keyboard-delay)
 - [Proxmox](#proxmox)
   * [Import OVA or VMDK](#import-ova-or-vmdk)
-
 ---
 
 ## QEMU
@@ -78,6 +78,14 @@ ethernet0.linkspeed    65000
 ethernetX.linkspeed = "Y"
 ```
 - This does only change the link speed displayed inside the vm, even a 1Gbps displayed ethernet link inside a vm can transfer as much as the physical nic of the esxi host can handle
+
+### VMWare Workstation Keyboard Delay
+- This seems to be a recurring problem ... at the moment there are at least two possbile solutions
+- One is to enable `Virtualize IOMMU` in the CPU settings of the VM
+- The other one is adding the following to the VMs `vmx` file
+```
+keyboard.vusb.enable = "TRUE"
+```
 
 ## Proxmox
 Stuff related to `proxmox`.
