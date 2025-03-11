@@ -135,7 +135,7 @@ ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18
 ## Enable Debug Print
 - Enabling `DbgPrint` monitoring can be done either by `registry key` or in `WinDbg`
 
-```ps
+```cmd
 # WinDbg
 ed kd_default_mask 0xf
 
