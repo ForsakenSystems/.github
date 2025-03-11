@@ -149,7 +149,7 @@ ed kd_default_mask 0xf
 ## Misc Commands
 - Just some commands
 
-```ps
+```md
 # help
 .hh <command>
 .hh !<command>
