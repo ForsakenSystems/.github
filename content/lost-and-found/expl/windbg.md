@@ -10,6 +10,7 @@
 - [Mona in WinDbg](#mona-in-windbg)
 - [Conditional Breakpoints](#conditional-breakpoints)
 - [Enable Debug Print](#enable-debug-print)
+- [Misc Commands](#misc-commands)
 ---
 
 
@@ -144,3 +145,41 @@ ed kd_default_mask 0xf
   - Value name: Default
   - Value data: 0xf
 ```
+
+## Misc Commands
+- Just some commands
+
+```ps
+# help
+.hh <command>
+.hh !<command>
+
+# Infos on structs
+dt <module>!<struct>
+dt <module>!<struct> <address>
+dt <module>!<struct> <address> -y <keyword/attribute>
+
+dt nt!_EPROCESS
+dt nt!_EPROCESS <address by e.g. !process command> -y Unique
+dt nt!_EPROCESS <address by e.g. !process command> -y Unique -y Header
+
+# dq vs !dq --> virt vs  physical addr
+dq <address> 
+!dq <address>
+
+# Module Infos
+lm 
+lm m <keyword/modulename>
+lm a <address to check if belongs to a module>
+
+
+
+
+```
+
+
+
+
+
+
+
