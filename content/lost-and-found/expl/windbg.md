@@ -150,7 +150,7 @@ ed kd_default_mask 0xf
 - Just some commands
 
 ```md
-# help
+# Help
 .hh <command>
 .hh !<command>
 
@@ -163,16 +163,26 @@ dt nt!_EPROCESS
 dt nt!_EPROCESS <address by e.g. !process command> -y Unique
 dt nt!_EPROCESS <address by e.g. !process command> -y Unique -y Header
 
-# dq vs !dq --> virt vs  physical addr
+# dq vs !dq --> virt vs phy addr
 dq <address> 
 !dq <address>
+
+# Convert virt to phy
+!vtop <dirbase> <virtualaddr>
 
 # Module Infos
 lm 
 lm m <keyword/modulename>
 lm a <address to check if belongs to a module>
 
+# Process (at the time of writing: 0x4 is system)
+!process <processid> <details>
+!process <processid> <details> <image>
 
+!process 4 0
+!process 0 0 <application.exe>
+
+# ...
 
 
 ```
