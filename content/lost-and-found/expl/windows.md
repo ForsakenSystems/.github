@@ -7,7 +7,7 @@
 - [Disable Windows Defender](#disable-windows-defender)
 - [Creating low Integrity cmd](#creating-low-integrity-cmd)
 - [Powershell Double Hop](#powershell-double-hop)
-- [WinDbg Fu](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/windbg.md)
+- [WinDbg FuFu](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/windbg.md)
 - [Token Stealing Shellcode](#token-stealing-shellcode)
 
 ---
