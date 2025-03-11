@@ -182,8 +182,38 @@ lm a <address to check if belongs to a module>
 !process 4 0
 !process 0 0 <application.exe>
 
-# ...
+# Stepping
+## Single step "over"
+p
 
+## Single step "into"
+t
+
+## Til next branching instr
+ph
+
+## Til return instr
+pt
+
+# Examine symbols
+x <module>
+x <module>!<function>
+
+# Search
+s <type> <from> <to> <what>
+
+s -a 0 L?80000000 w00tw00t
+s -d 0 L?80000000 0x90909090
+s -q 0 L?80000000 0x9090909090909090
+
+# Formats (prefix: "0y" = binary, "0n" = dec , "default" = hex)
+.formats <value>
+.formats <value1> <operator> <value2>
+
+.formats 41414141
+.formats 41414141 >> 18
+.formats 41414141 & 2
+.formats 41414141 + 90909090
 
 ```
 
