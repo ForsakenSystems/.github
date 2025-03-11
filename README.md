@@ -60,6 +60,7 @@ Everything which got forgotten from time to time.
 - [Skeletons](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/skel.md)
 - [Shell related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/shell.md)
 - [Windows](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/windows.md)
+- [WinDbg](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/windbg.md)
 - [TeX exam templates OffSec](https://github.com/solacol/offsec-tex-exam-templates)
 - [Misc](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/expl/misc.md)
 
