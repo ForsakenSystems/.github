@@ -9,6 +9,7 @@
 - [SMAP During Debugging](#smap-during-debugging)
 - [Mona in WinDbg](#mona-in-windbg)
 - [Conditional Breakpoints](#conditional-breakpoints)
+- [Finding the Pool](#finding-the-pool)
 - [Enable Debug Print](#enable-debug-print)
 - [Misc Commands](#misc-commands)
 ---
@@ -129,8 +130,25 @@ bp ntdll+31337 ".printf \"alloc(0x%x) = 0x%p from 0x%p \\n\", poi(rsp+50), rax, 
 
 - Compare `QWORD` in register `rcx` at offset `0x18` with value `0x300` (processor breakpoint)
 ```powershell
-ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18 L1; } .else { gc; }
+ba e1 /p <process> example+1337 ".if ( qwo(@rcx+0x18) != 0x300 ) { dqs @rcx+0x18 L1; } .else { gc; }"
 ```
+
+## Finding the Pool
+- To find the `pool` for a certain address, object etc. some can use the `!poolfind` command with a given `tag`
+- Since the command might be slow as hell, tuning the cache a bit might be useful 
+
+```powershell
+# Default 0x1000 KB
+.cache 0x99999
+
+!poolfind NpFs -nonpaged
+```
+
+- Another option might be to use `PoolHitTag`
+```powershell
+ed nt!PoolHitTag 'NpFs'
+```
+
 
 ## Enable Debug Print
 - Enabling `DbgPrint` monitoring can be done either by `registry key` or in `WinDbg`
@@ -215,6 +233,16 @@ s -q 0 L?80000000 0x9090909090909090
 .formats 41414141 & 2
 .formats 41414141 + 90909090
 
+# pool
+!pool <address>
+!poolused <flags> <tag>
+!poolfind <tag> -<pool>
+
+!poolfind NpFs -nonpaged
+!poolused 2 Np*
+
+# Get last error
+!gle
 ```
 
 
