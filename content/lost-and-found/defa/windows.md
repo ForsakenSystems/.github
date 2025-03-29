@@ -49,6 +49,22 @@ oobe\bypassnro.cmd
 # after automatic reboot, step through installation procedure again ...
 # ... in the network requirements menu, you can now use the "I don't have internet" option
 ```
+- If Microsoft is removing the `bypassnro.cmd` script, but not disabling the registry keys
+```powershell
+# Reg key
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f
+
+# Cmd
+@echo off
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f
+shutdown /r /t 0
+
+# Powershell
+Write-Host "Set BypassNRO" -ForegroundColor Cyan
+& reg load HKLM\SOFT $workdir\Windows\System32\Config\Software
+& reg add HKLM\SOFT\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f
+& reg unload HKLM\SOFT
+```
 
 ## Hyper-V Nested Virtualization
 - To enable nested virtualization or lets say the cpu feature needed
