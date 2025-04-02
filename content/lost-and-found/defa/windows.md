@@ -65,6 +65,17 @@ Write-Host "Set BypassNRO" -ForegroundColor Cyan
 & reg add HKLM\SOFT\Microsoft\Windows\CurrentVersion\OOBE /v BypassNRO /t REG_DWORD /d 1 /f
 & reg unload HKLM\SOFT
 ```
+- Another option is the following
+```cmd
+# Step through installation procedure until network requirements
+# Press 
+SHIFT + F10
+
+# In the the opened command prompt enter
+start ms-cxh:localonly
+
+# Create your local account
+```
 
 ## Hyper-V Nested Virtualization
 - To enable nested virtualization or lets say the cpu feature needed
