@@ -7,6 +7,7 @@
 - [Git Adjust HTTP Post Buffer](#git-post-buffer)
 - [Git Change HTTP Version](#git-change-http-version)
 - [Git Remove file from history](#remove-file-from-git-history)
+- [Tmux on Synology NAS](#tmux-on-synology-nas)
 
 ---
 
@@ -70,3 +71,13 @@ git for-each-ref --format='delete %(refname)' refs/original | git update-ref --s
 git reflog expire --expire=now --all
 git gc --prune=now
 ```
+
+## Tmux on Synology NAS
+- Synology NAS systems usually do not have a fully blown set of tools installed ... what for
+- If needed it is still possible to get typical tools like `tmux` installed
+  * Check your version/codename
+  * Search for it here: `https://archive.synology.com/download/Package/DiagnosisTool`
+  * After download, install via packet manager
+  * Do not forget to update from time to time ;)
+- If your NAS has internet connection, `synogear install` might be used
+- Tools can be found in `/var/packages/DiagnosisTool/target/tool/`
