@@ -15,6 +15,7 @@
 - [Rolling back package on Debian/Ubuntu](#rolling-back-package-on-debian)
 - [Reset Admin Password pfSense](#reset-admin-password-pfsense)
 - [Create Bootable Windows From ISO](#create-bootable-windows-from-iso)
+- [Terminator input double characters in group/broadcast mode](#terminator-input-double-characters-in-groupbroadcast-mode)
 
 ---
 
@@ -179,4 +180,10 @@ dpkg -i /var/cache/apt/archives/<PACKAGE_NAME>.deb
 # WindowsXYZ ... windows install iso
 # sdb ... usb drive to install to
 woeusb --device WindowsXYZ.iso /dev/sdb
+```
+
+## Terminator input double characters in group/broadcast mode
+- if input characters are doubled when using group/broadcast the following might help
+```bash
+export IBUS_NO_SNOOPER_APPS=python3
 ```
