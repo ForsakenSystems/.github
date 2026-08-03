@@ -20,12 +20,12 @@
 
 
 # About
-It is all about to note down some stuff, which got lost all the time. So nothing special, here.
+It is all about to note down some stuff, which got lost all the time. So nothing special here.
 
 And of course looks best with dark theme ;)
 
 # Note
-Note, all that can be found here is based on or powered by sheer ignorance and honest sloth.
+Note, all what can be found here is based on or powered by sheer ignorance and honest sloth.
 
 That said, some of the stuff might be ...
 
@@ -33,19 +33,18 @@ That said, some of the stuff might be ...
 - ... not working as expected (for you ^^)
 - ... definitely not reasonable in a productive environment
 - ... for research purpose only
-- ... a cheatsheet for lazy people who wants, that things just work, no matter how
+- ... a cheatsheet for lazy people who want that things just work, no matter how
 
 # Just Stuff
-Some wannebe write-ups or maybe other content which nobody is interested in ^^
+Some wannebe write-ups or maybe other content which nobody is interested in
 
-- [Wannebes](https://github.com/ForsakenSystems/.github/blob/main/content/stuff/wannebes.md)
 - [More or less research](https://github.com/ForsakenSystems/.github/blob/main/content/stuff/research.md)
 
 # Capture the Flag
 Follow **[Team localos](http://localos.io)**, mainly interessted in building CTFs for fun.
 
 # Lost and Found
-Everything which got forgotten from time to time.
+Everything which got forgotten over time.
 
 ### More or Less Default Stuff
 - [Database related](https://github.com/ForsakenSystems/.github/blob/main/content/lost-and-found/defa/db.md)
